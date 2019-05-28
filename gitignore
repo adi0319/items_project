@@ -1,2 +1,4 @@
 models.pyc
 tech.db
+.DS_Store
+static/.DS_Store
