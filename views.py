@@ -169,6 +169,25 @@ def deleteTechItem(category_id, tech_id):
     else:
         return render_template('deleteTechItem.html', item=techItemToDelete)
 
+@app.route('/category/<int:category_id>/tech/JSON')
+def categoryTechItemsJSON(category_id):
+    """ JSON API to view Category Information """
+    category = session.query(Category).filter_by(id=category_id).one()
+    techItems = session.query(TechItem).filter_by(category_id=category_id).all()
+    return jsonify(categoryItems=[i.serialize for i in techItems])
+
+@app.route('/category/<int:category_id>/tech/<int:tech_id>/JSON')
+def techItemJSON(category_id, tech_id):
+    """ JSON API to view TechItem Information """
+    techItem = session.query(TechItem).filter_by(id=tech_id, category_id=category_id).one()
+    return jsonify(techItem=techItem.serialize)
+
+@app.route('/category/JSON')
+def allCategoriesJSON():
+    """ JSON API to view all categories """
+    categories = session.query(Category).all()
+    return jsonify(categories=[c.serialize for c in categories])
+
 @app.route('/login')
 def showLogin():
     """ Login route, create anti-forgery state token """
