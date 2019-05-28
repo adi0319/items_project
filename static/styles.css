@@ -56,12 +56,12 @@ h3 {
 .btn {
 	padding: 20px;
 	margin: 0;
-	border-color: #9FB80A;
+	border-color: #42c3c9;
 	border-width: 2px;
-	color: #9FB80A;;
+	color: #0a11b8;;
 }
 .btn:hover {
-	border-color: #9FB80A;
+	border-color: #1de3e4;
 }
 .btn.delete {
 	border-color: #aaaaaa;
@@ -100,14 +100,15 @@ h3 {
 }
 .banner.main {
 	height: 150px;
-	background: url("/static/top-banner.jpg");
+	background: url("/static/tech-banner.jpg");
 	background-position: right;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-color: #909090;
 }
 .banner.menu {
 	height: 150px;
-	background-color: #E1E17F;
+	background-color: #000000;
 }
 .banner.profile {
 	height: 150px;
@@ -115,13 +116,15 @@ h3 {
 }
 .banner h1 {
 	margin: 45px 0;
+  color: #FFFFFF;
+	font-weight: bolder;
 }
  .category-list {
  	background-color: #F0F0F0;
  	padding: 20px;
 u }
  .category-list:hover {
- 	background-color: #e1e17f;
+ 	background-color: #6ee1e6;
  	padding: 20px;
 }
 .tech-item {
@@ -153,11 +156,14 @@ u }
 	background-color: #98FB98;
 	width:100%;
 	text-decoration: none;
-
 }
 
 .flash li {
 	list-style-type: none;
 	text-align: center;
+}
 
+li, ul {
+	background-color: #a6aff1;
+	color: #FFFFFF;
 }

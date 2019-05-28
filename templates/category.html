@@ -1,14 +1,13 @@
 {% extends "main.html" %}
 {% block content %}
 {% include "header.html" %}
-	<div class="row divider green">
+	<div class="row divider blue">
 		<div class="col-md-12"></div>
 	</div>
 	<div class="row banner menu">
 		<div class="col-md-11 col-md-offset-1 padding-none">
 			<h1>{{ category.name }}
 			<figure class="creator">
-				<!-- <img src="{{ url_for('static', filename='blank_user.gif') }}"> -->
 				 <img class="img-responsive" src="{{creator.picture}}" alt="{{url_for('static', filename='blank_user.gif')}}">
 				<figcaption>{{creator.name}}</figcaption>
 			</figure>
