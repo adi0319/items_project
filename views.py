@@ -148,7 +148,7 @@ def newTechItem(category_id):
         return render_template('newTechItem.html', category_id=category_id)
 
 
-@app.route('/category/<int:category_id>/tech/<int:tech_id>/edit',
+@app.route('/category/<int:category_id>/tech/<int:tech_id>/edit/',
            methods=['GET', 'POST'])
 def editTechItem(category_id, tech_id):
     """ Edit an existing tech item """
@@ -179,7 +179,7 @@ def editTechItem(category_id, tech_id):
                                tech_id=tech_id, item=editedTechItem)
 
 
-@app.route('/category/<int:category_id>/tech/<int:tech_id>/delete',
+@app.route('/category/<int:category_id>/tech/<int:tech_id>/delete/',
            methods=['GET', 'POST'])
 def deleteTechItem(category_id, tech_id):
     """ Delete an existing tech item """
@@ -204,7 +204,7 @@ def deleteTechItem(category_id, tech_id):
         return render_template('deleteTechItem.html', item=techItemToDelete)
 
 
-@app.route('/category/<int:category_id>/tech/JSON')
+@app.route('/category/<int:category_id>/tech/JSON/')
 def categoryTechItemsJSON(category_id):
     """ JSON API to view Category Information """
     category = session.query(Category).filter_by(id=category_id).one()
@@ -213,7 +213,7 @@ def categoryTechItemsJSON(category_id):
     return jsonify(categoryItems=[i.serialize for i in techItems])
 
 
-@app.route('/category/<int:category_id>/tech/<int:tech_id>/JSON')
+@app.route('/category/<int:category_id>/tech/<int:tech_id>/JSON/')
 def techItemJSON(category_id, tech_id):
     """ JSON API to view TechItem Information """
     techItem = session.query(TechItem).filter_by(
@@ -221,7 +221,7 @@ def techItemJSON(category_id, tech_id):
     return jsonify(techItem=techItem.serialize)
 
 
-@app.route('/category/JSON')
+@app.route('/category/JSON/')
 def allCategoriesJSON():
     """ JSON API to view all categories """
     categories = session.query(Category).all()
