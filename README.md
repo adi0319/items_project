@@ -34,11 +34,11 @@ This project was to develop an application that develops a list of items within 
 `/category/new/` - Create a new category (login required)\
 `/category/<int:category_id>/edit/` - Edit an existing category (login required)\
 `/category/<int:category_id>/delete/` - Delete an existing category (login required)\
-`/category/<int:category_id>/` or `/category/<int:category_id>/tech/` - Display a specific category\
+`/category/<int:category_id>/` or `/category/<int:category_id>/tech/` - Display a specific category
 
 `/category/<int:category_id>/tech/new/` - Create a new tech item (login required)\
 `/category/<int:category_id>/tech/<int:tech_id>/edit/` - Edit an existing tech item (login required)\
-`/category/<int:category_id>/tech/<int:tech_id>/delete/` - Delete an existing tech item (login required)\
+`/category/<int:category_id>/tech/<int:tech_id>/delete/` - Delete an existing tech item (login required)
 
 `/category/JSON/` - API endpoint for all categories\
 `/category/<int:category_id>/tech/JSON/` - API endpoint for a specific category\
