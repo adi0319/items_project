@@ -42,7 +42,7 @@ This project was to develop an application that develops a list of items within 
 
 `/category/JSON/` - API endpoint for all categories\
 `/category/<int:category_id>/tech/JSON/` - API endpoint for a specific category\
-`/category/<int:category_id>/tech/<int:tech_id>/JSON/` - API endpoint for a specific item\
+`/category/<int:category_id>/tech/<int:tech_id>/JSON/` - API endpoint for a specific item
 
 ## Author
 Adilene Pulgarin
