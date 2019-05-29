@@ -22,9 +22,12 @@ This project was to develop an application that develops a list of items within 
 
 ## Set Up
 1. Install the Linux-based virtual machine. This will require installing [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1)
-  - To ensure that the same working environment is used, make sure to use [this vagrantfile](Vagrantfile)
-  - After installing or if you simply need to bring the vm back online, use the commands `vagrant up` followed by `vagrant ssh`
+    - To ensure that the same working environment is used, make sure to use [this vagrantfile](Vagrantfile)
+    - After installing or if you simply need to bring the vm back online, use the commands `vagrant up` followed by `vagrant ssh`
 2. Navigate to the `/vagrant` directory and clone this project
 3. Change directory to the project: `cd items_project`
 4. Set up the database by running this command: `python models.py`
 5. Run the app: `python views.py`
+
+## Author
+Adilene Pulgarin

@@ -10,7 +10,7 @@ from flask import session as login_session
 from models import Base, Category, TechItem, User
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine, asc
-from flask import Flask, render_template, request,
+from flask import Flask, render_template, request
 from flask import redirect, jsonify, url_for, flash
 app = Flask(__name__)
 
@@ -110,8 +110,8 @@ def showCategory(category_id):
     creator = getUserInfo(category.user_id)
     items = session.query(TechItem).filter_by(category_id=category_id).all()
 
-    if 'username' not in login_session
-    or creator.id != login_session['user_id']:
+    if ('username' not in login_session
+            or creator.id != login_session['user_id']):
         return render_template(
             'publicCategory.html',
             items=items, category=category, creator=creator)
@@ -351,8 +351,8 @@ def gdisconnect():
         return response
 
     # attempt to sign out the user
-    url = 'https://accounts.google.com/o/oauth2/revoke?token=%s'
-    % login_session['access_token']
+    url = ('https://accounts.google.com/o/oauth2/revoke?token=%s'
+           % login_session['access_token'])
     h = httplib2.Http()
     result = h.request(url, 'GET')[0]
 
